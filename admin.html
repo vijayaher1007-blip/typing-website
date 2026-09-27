@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Typing Website - Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Typing Website Admin Panel</h1>
+
+        <p>Manage your typing passages</p>
+
+    </header>
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Add New Passage</h2>
+
+            <br>
+
+
+            <label>
+                Passage Title
+            </label>
+
+            <input
+                type="text"
+                id="passageTitle"
+                placeholder="Example: English Practice 1"
+            >
+
+
+            <br>
+            <br>
+
+
+            <label>
+                Passage Text
+            </label>
+
+            <textarea
+                id="passageContent"
+                placeholder="Enter your typing passage here..."
+            ></textarea>
+
+
+            <br>
+            <br>
+
+
+            <button onclick="addPassage()">
+                Add Passage
+            </button>
+
+        </div>
+
+
+        <br>
+
+
+        <div class="card">
+
+            <h2>Existing Passages</h2>
+
+            <div id="passageList"></div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 My Typing Website
+        </p>
+
+    </footer>
+
+
+    <script src="./admin.js"></script>
+
+</body>
+
+</html>

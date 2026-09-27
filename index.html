@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My English Typing Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My English Typing Website</h1>
+        <p>Improve your typing speed and accuracy</p>
+    </header>
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>English Typing Test</h2>
+
+            <!-- TIMER -->
+            <div class="timer-section">
+                <h3>
+                    Time:
+                    <span id="timer">05:00</span>
+                </h3>
+            </div>
+
+
+            <!-- TEST TIME -->
+            <div class="time-selection">
+
+                <h3>Select Test Time:</h3>
+
+                <select id="timeSelect">
+
+                    <option value="5">5 Minutes</option>
+
+                    <option value="7">7 Minutes</option>
+
+                    <option value="10">10 Minutes</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PASSAGE SELECTION -->
+            <div class="passage-selection">
+
+                <h3>Select Passage:</h3>
+                <!-- KEYBOARD SETTINGS -->
+
+<div class="keyboard-settings">
+
+    <h3>Keyboard Settings:</h3>
+
+    <div class="setting-row">
+
+        <label for="backspaceOption">
+            Backspace:
+        </label>
+
+        <select id="backspaceOption">
+            <option value="on">ON</option>
+            <option value="off">OFF</option>
+        </select>
+
+    </div>
+
+
+    <div class="setting-row">
+
+        <label for="arrowOption">
+            Arrow Keys:
+        </label>
+
+        <select id="arrowOption">
+            <option value="on">ON</option>
+            <option value="off">OFF</option>
+        </select>
+
+    </div>
+
+</div>
+
+                <select
+                    id="passageSelect"
+                    onchange="changePassage()">
+                </select>
+
+            </div>
+
+
+            <!-- GCC STYLE TYPING AREA -->
+
+            <div class="typing-container">
+
+                <!-- LEFT SIDE PASSAGE -->
+
+                <div class="passage-panel">
+
+                    <h3>Passage</h3>
+
+                    <div
+                        class="passage"
+                        id="passageText">
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE TYPING -->
+
+                <div class="typing-panel">
+
+                    <h3>Type the above passage:</h3>
+
+                    <textarea
+                        id="typingArea"
+                        placeholder="Start typing here...">
+                    </textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- START BUTTON -->
+
+            <div class="button-section">
+
+    <button onclick="startTest()">
+        Start Test
+    </button>
+
+    <button
+        id="submitButton"
+        onclick="finishTest()"
+        disabled>
+        Submit Test
+    </button>
+
+</div>
+
+            <!-- RESULT -->
+
+            <div
+                id="resultBox"
+                class="result-box">
+
+                <h2>Test Result</h2>
+
+                <div class="result-grid">
+
+                    <div class="result-item">
+                        <h3 id="wpmResult">0</h3>
+                        <p>WPM</p>
+                    </div>
+
+                    <div class="result-item">
+                        <h3 id="accuracyResult">0%</h3>
+                        <p>Accuracy</p>
+                    </div>
+
+                    <div class="result-item">
+                        <h3 id="errorsResult">0</h3>
+                        <p>Errors</p>
+                    </div>
+
+                    <div class="result-item">
+                        <h3 id="charactersResult">0</h3>
+                        <p>Characters</p>
+                    </div>
+
+                </div>
+
+
+                <button onclick="startTest()">
+                    Try Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>© 2026 My Typing Website</p>
+
+    </footer>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
